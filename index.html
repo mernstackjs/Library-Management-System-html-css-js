@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Library Management System</h1>
+
+    <main>
+      <div class="section">
+        <h2>Add a Book</h2>
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Enter title" />
+        <label for="author">Author:</label>
+        <input type="text" id="author" placeholder="Enter author" />
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" placeholder="Enter ISBN" />
+        <label for="copies">Copies:</label>
+        <input type="number" id="copies" placeholder="Enter number of copies" />
+        <button onclick="addBook()">Add Book</button>
+      </div>
+
+      <div class="section">
+        <h2>Reserve a Book</h2>
+        <label for="reserveIsbn">ISBN:</label>
+        <input type="text" id="reserveIsbn" placeholder="Enter ISBN" />
+        <label for="reserveBorrower">Borrower:</label>
+        <input
+          type="text"
+          id="reserveBorrower"
+          placeholder="Enter borrower's name"
+        />
+        <button onclick="reserveBook()">Reserve Book</button>
+      </div>
+
+      <div class="section">
+        <h2>List Reserved Books</h2>
+        <label for="reservedBorrower">Borrower:</label>
+        <input
+          type="text"
+          id="reservedBorrower"
+          placeholder="Enter borrower's name"
+        />
+        <button onclick="listReservedBooks()">List Reserved Books</button>
+        <ul id="reservedBooks"></ul>
+      </div>
+
+      <div class="section">
+        <h2>Library Books</h2>
+        <div id="libraryBooks"></div>
+      </div>
+
+      <div class="section">
+        <h2>Borrow a Book</h2>
+        <label for="borrowIsbn">ISBN:</label>
+        <input type="text" id="borrowIsbn" placeholder="Enter ISBN" />
+        <label for="borrowerName">Borrower Name:</label>
+        <input
+          type="text"
+          id="borrowerName"
+          placeholder="Enter borrower's name"
+        />
+        <button onclick="borrowBook()">Borrow Book</button>
+      </div>
+
+      <div class="section">
+        <h2>Return a Book</h2>
+        <label for="returnIsbn">ISBN:</label>
+        <input type="text" id="returnIsbn" placeholder="Enter ISBN" />
+        <label for="returnBorrower">Borrower Name:</label>
+        <input
+          type="text"
+          id="returnBorrower"
+          placeholder="Enter borrower's name"
+        />
+        <button onclick="returnBook()">Return Book</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
